@@ -39,8 +39,16 @@ public class Triangulo {
     public void setAltura(double altura) {
         this.altura = altura;
     }
+    
+    public void setAltura(int altura) {
+        this.altura = (double)altura;
+    }
 
     public void setBase(double base) {
         this.base = base;
+    }
+    
+    public void setBase(int base) {
+        this.base = (double)base;
     }
 }
