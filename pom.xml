@@ -5,6 +5,10 @@
     <artifactId>triangulo_teste</artifactId>
     <version>1</version>
     <packaging>jar</packaging>
+    <properties>
+        <sonar.organization>osmarbraz</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+    </properties>
     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
