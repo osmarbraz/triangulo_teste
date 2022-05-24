@@ -26,25 +26,8 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <sonar.organization>osmarbraz</sonar.organization>
+         <sonar.projectKey>osmarbraz_triangulo_teste</sonar.projectKey>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-    </properties>
-    
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.sonarsource.scanner.maven</groupId>
-                <artifactId>sonar-maven-plugin</artifactId>
-                <version>3.9.1.2184</version>
-                <executions>
-                    <execution>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>sonar</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>        
-    </build>
-    
+    </properties>  
+      
 </project>
