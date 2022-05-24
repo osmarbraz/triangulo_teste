@@ -9,9 +9,17 @@ on:
 jobs:
   # Jobs do ambiente
   build:
-    name: Build
-    # Runner com uma instância do ubuntu
-    runs-on: ubuntu-latest
+    # Runner com uma instância da matriz
+    runs-on: ${{ matrix.os }}      
+    # Nome do Job no workflow
+    name: build-hmg - SO ${{ matrix.os }} e JDK ${{matrix.java}}... 
+    # Prepara diversas versões do SO e do Java
+    strategy:
+      fail-fast: false
+      matrix:        
+        #os: [ubuntu-latest, macos-latest, windows-latest]  
+        os: [windows-latest]  
+        java: [18]      
     steps:
       # Utiliza a action checkout para fazer o git clone no runner  
       - uses: actions/checkout@v2
