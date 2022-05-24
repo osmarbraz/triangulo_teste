@@ -17,10 +17,10 @@ jobs:
     strategy:
       fail-fast: false
       matrix:        
-        #os: [ubuntu-latest, macos-latest, windows-latest]  
-        os: [windows-latest]  
-        #java: [16, 17, 18]   
-        java: [18]      
+        os: [ubuntu-latest, macos-latest]  
+        #os: [windows-latest]  
+        java: [16, 17, 18]   
+        #java: [18]      
     steps:
       # Utiliza a action checkout para fazer o git clone no runner  
       - uses: actions/checkout@v2
