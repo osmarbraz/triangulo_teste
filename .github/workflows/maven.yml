@@ -12,7 +12,7 @@ jobs:
     # Runner com uma instância da matriz
     runs-on: ${{ matrix.os }}      
     # Nome do Job no workflow
-    name: build-hmg - SO ${{ matrix.os }} e JDK ${{matrix.java}}... 
+    name: build - SO ${{ matrix.os }} e JDK ${{matrix.java}}... 
     # Prepara diversas versões do SO e do Java
     strategy:
       fail-fast: false
