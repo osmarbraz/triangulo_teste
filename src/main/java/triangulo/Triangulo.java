@@ -41,7 +41,7 @@ public class Triangulo {
     }
     
     public void setAltura(int altura) {
-        this.altura = (double)altura;
+        this.altura = altura;
     }
 
     public void setBase(double base) {
@@ -49,6 +49,6 @@ public class Triangulo {
     }
     
     public void setBase(int base) {
-        this.base = (double)base;
+        this.base = base;
     }
 }
