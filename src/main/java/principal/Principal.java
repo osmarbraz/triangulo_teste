@@ -1,3 +1,5 @@
+package principal;
+
 
 import triangulo.Triangulo;
 import javax.swing.JOptionPane;
@@ -23,6 +25,9 @@ public class Principal {
                     JOptionPane.showMessageDialog(null, "Área Triangulo: " + triangulo.getArea());
                     break;
                 }
+                default:
+                    JOptionPane.showMessageDialog(null, "Alternativa inválida!");
+                    break;
             }
         }
     }
