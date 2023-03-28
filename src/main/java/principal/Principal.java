@@ -1,6 +1,5 @@
 package principal;
 
-
 import triangulo.Triangulo;
 import javax.swing.JOptionPane;
 
