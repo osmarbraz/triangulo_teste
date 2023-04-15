@@ -5,12 +5,7 @@
 # Triângulo com CI.
 
 <br>
-- Utiliza o Apache Maven para a automatização da construção.<br>
-- A pasta test contêm os testes unitários do projeto utilizando JUnit 4.<br>
-- A cobertura do código é realizada através do JaCoCo.<br>
-
-<br>
-- O projeto foi desenvolvido no NetBeans deve ser chamado calculadora_teste.<br>
+- O projeto foi desenvolvido no NetBeans deve ser chamado triangulo_teste.<br>
 - Utiliza o Apache Maven para a automatização da construção.<br>
 - A pasta test contêm os testes unitários do projeto utilizando JUnit 5.<br>
 - Os testes são realizados no SO ubuntu-lastest, windows-lastest e macos-lastest e JDK 16, 17 e 18.<br>
