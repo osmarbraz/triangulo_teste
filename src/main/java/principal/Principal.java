@@ -3,6 +3,11 @@ package principal;
 import triangulo.Triangulo;
 import javax.swing.JOptionPane;
 
+/**
+ * Classe do programa principal.
+ * 
+ * @author osmar
+ */
 public class Principal {
 
     public static void main(String[] args) {
