@@ -33,7 +33,7 @@ jobs:
           distribution: 'temurin'
           cache: maven
       - name: Cache dos pacotes do SonarCloud
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ~/.sonar/cache
           key: ${{ runner.os }}-sonar
@@ -42,7 +42,7 @@ jobs:
       # que as próximas execuções do workflow sejam mais rápidas visto 
       # que as dependências já estarão disponibilizadas para o runner
       - name: Cache dos pacotes do Maven
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ~/.m2
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
