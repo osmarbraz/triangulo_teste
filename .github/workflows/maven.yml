@@ -1,13 +1,14 @@
 # Nome do workflow no repositório
-name: Build
+name: Integração continua de Java com Maven
+   
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
   pull_request:
-    types: [opened, synchronize, reopened]
+    branches: [ main ]    
+    
 jobs:
-  # Jobs do ambiente
+  # Jobs do ambiente de desenvolvimento
   build:
     # Runner com uma instância da matriz
     runs-on: ${{ matrix.os }}      
@@ -18,8 +19,8 @@ jobs:
       fail-fast: false
       matrix:        
         os: [ubuntu-latest, macos-latest]          
-        java: [17, 18]   
-        #java: [18]      
+        java: [17, 18]       
+    # Passos do job
     steps:
       # Utiliza a action checkout para fazer o git clone no runner  
       - uses: actions/checkout@v3
@@ -50,7 +51,7 @@ jobs:
       # Executa a verificação do projeto com o Maven no runner    
       - name: Verificando o código
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}        
         #run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=osmarbraz_triangulo_teste #Default do sonarcloud        
         run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=osmarbraz_triangulo_teste org.jacoco:jacoco-maven-plugin:prepare-agent -Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/jacoco.xml 
